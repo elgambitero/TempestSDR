@@ -55,7 +55,7 @@ public class TSDRFileSource extends TSDRSource {
 			
 			in.skipBytes(8);
 			
-			final int samplerate = in.readByte() | (in.readByte() << 8) | (in.readByte() << 16) | (in.readByte() << 24);
+			final long samplerate = in.readLong();
 			
 			in.skipBytes(6);
 			
