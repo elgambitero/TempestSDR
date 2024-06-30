@@ -111,7 +111,7 @@ public class TSDRLibrary {
 		else if (rawOSNAME.contains("mac"))
 			OSNAME = "MAC";
 
-		if (rawARCHNAME.contains("arm"))
+		if (rawARCHNAME.contains("arm") || rawARCHNAME.contains("aarch"))
 			ARCHNAME = "ARM";
 		else if (rawARCHNAME.contains("64"))
 			ARCHNAME = "X64";

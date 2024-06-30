@@ -46,13 +46,16 @@ ifeq ($(OS),Windows_NT)
 	endif
 else ifeq ($(shell uname -s),Darwin)
 	OSNAME ?= MAC
-	INC += /System/Library/Frameworks/JavaVM.framework/Versions/Current/Headers
+	INC += /opt/homebrew/Cellar/openjdk/21.0.2/include
 	EXT ?= .so
 	ifeq ($(shell uname -m),x86)
 		ARCHNAME = X86
 	endif
 	ifeq ($(shell uname -m),x86_64)
 		ARCHNAME = X64
+	endif
+	ifeq ($(shell uname -m),aarch)
+		ARCHNAME = ARM
 	endif
 else
 
